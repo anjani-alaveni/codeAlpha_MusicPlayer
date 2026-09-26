@@ -47,23 +47,7 @@ body {
  color: #666;
 }
 
-/* Progress Bar */
 
-.progress-container {
- display: flex;
-
- align-items: center;
-
- gap: 10px;
-
- margin-bottom: 20px;
-}
-
-#progress {
- width: 100%;
-
- cursor: pointer;
-}
 
 /* Controls */
 
@@ -84,7 +68,7 @@ body {
  height: 50px;
 
  border: none;
- 
+
  border-radius: 20px;
 
  background: #214e6e;
@@ -94,31 +78,211 @@ body {
  font-size: 20px;
 
  cursor: pointer;
- 
- 
+
+
 }
 
 .controls button:hover {
  transform: scale(1.1);
 }
 
-/* Volume */
 
-.volume-container {
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-section {
  display: flex;
 
  align-items: center;
 
  gap: 10px;
 
- margin-bottom: 25px;
-}
-
-#volume {
  width: 100%;
 
- cursor: pointer;
+ margin: 25px 0;
 }
+
+.progress-section span {
+ font-size: 12px;
+
+ color: #999;
+
+ min-width: 35px;
+}
+
+#current-time {
+ text-align: left;
+}
+
+#duration {
+ text-align: right;
+}
+
+
+/* =========================
+   MODERN RANGE SLIDER
+========================= */
+
+#progress {
+ flex: 1;
+
+ appearance: none;
+
+ height: 4px;
+
+ border-radius: 10px;
+
+ background: #444;
+
+ cursor: pointer;
+
+ outline: none;
+}
+
+
+/* Chrome / Edge / Safari */
+
+#progress::-webkit-slider-thumb {
+
+ appearance: none;
+
+ width: 12px;
+
+ height: 12px;
+
+ border-radius: 50%;
+
+ background: rgb(28, 57, 62);
+
+ cursor: pointer;
+
+ opacity: 0;
+
+ transition: 0.2s;
+
+}
+
+
+/* Show thumb when hovering */
+
+#progress:hover::-webkit-slider-thumb {
+
+ opacity: 1;
+
+}
+
+
+/* Firefox */
+
+#progress::-moz-range-thumb {
+
+ width: 12px;
+
+ height: 12px;
+
+ border: none;
+
+ border-radius: 50%;
+
+ background: rgb(28, 57, 62);
+
+ cursor: pointer;
+
+}
+
+
+/* =========================
+   VOLUME
+========================= */
+
+.volume-section {
+
+ display: flex;
+
+ align-items: center;
+
+ gap: 10px;
+
+ margin: 20px 0;
+
+}
+
+.volume-icon {
+
+ font-size: 16px;
+
+}
+
+
+/* Volume line */
+
+#volume {
+
+ flex: 1;
+
+ appearance: none;
+
+ height: 4px;
+
+ border-radius: 10px;
+
+ background: rgb(28, 57, 62);
+
+ cursor: pointer;
+
+ outline: none;
+
+}
+
+
+/* Volume thumb */
+
+#volume::-webkit-slider-thumb {
+
+ appearance: none;
+
+ width: 10px;
+
+ height: 10px;
+
+ border-radius: 50%;
+
+ background: rgb(28, 57, 62);
+
+ cursor: pointer;
+
+ opacity: 0;
+
+ transition: 0.2s;
+
+}
+
+#volume:hover::-webkit-slider-thumb {
+
+ opacity: 1;
+
+}
+
+
+#volume::-moz-range-thumb {
+
+ width: 10px;
+
+ height: 10px;
+
+ border: none;
+
+ border-radius: 50%;
+
+ background: rgb(28, 57, 62);
+
+ cursor: pointer;
+
+}
+
+
+
 
 /* Playlist */
 
