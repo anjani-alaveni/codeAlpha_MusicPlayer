@@ -1,18 +1,15 @@
 * {
- margin: 0;
- padding: 0;
+
  box-sizing: border-box;
 }
 
 body {
  min-height: 100vh;
-
  display: flex;
  justify-content: center;
  align-items: center;
-
- font-family: Arial, sans-serif;
-
+ padding: 30px;
+ box-sizing: border-box;
  background: #214e6e;
 }
 
@@ -27,7 +24,8 @@ body {
 
  text-align: center;
 
- box-shadow: 0 10px 30px rgba(182, 43, 173, 0.3);
+ box-sizing: border-box;
+ margin: 0;
 }
 
 .music-player h1 {
